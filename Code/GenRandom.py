@@ -11,11 +11,11 @@ def main():
     out_fn = sys.argv [1]
     print ("Output file is %s" % out_fn)
     
-    gen_random (out_fn, RandomGenerator.rg2)
+    gen_random (out_fn, RandomGenerator.rg1)
     sys.exit(0)
 
 def gen_random (out_fn, random_generator):
-    
+
     f= open (out_fn, "wb")
     width = 512
     height = 512
@@ -24,7 +24,6 @@ def gen_random (out_fn, random_generator):
     for y in range (0, width):
         for x in range (0, height):
             r = random_generator ()
-            #r = (lcg() >> 4) % 2
             sys.stdout.write ("%d" % r)
             byte += r << idx
             idx += 1
