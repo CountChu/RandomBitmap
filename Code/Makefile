@@ -1,6 +1,7 @@
 clean:
-	rm *.bin
-	rm *.png
+	rm -f *.bin
+	rm -f *.png
+	rm -f *.pyc
 
 test1:
 	python GenRandom.py ../Test/Random.bin
