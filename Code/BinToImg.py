@@ -2,12 +2,18 @@ import sys
 from PIL import Image
 import math
 
-def bin_to_img ():
+def main ():
+
     if len (sys.argv) != 2:
         print "Usage: python BinToImage.py File.bin"
 
     bin_fn = sys.argv [1]
     png_fn = bin_fn + ".png"
+
+    bin_to_img (bin_fn, png_fn)
+    sys.exit (0)    
+
+def bin_to_img (bin_fn, png_fn):
 
     f = open (bin_fn, "rb")
     bytes = f.read()
@@ -49,9 +55,7 @@ def bin_to_img ():
         print ("Error: y = %d" % y)
         sys.exit (1)
 
-
     im.show ()
     im.save (png_fn)
-    sys.exit (0)
 
 main()
