@@ -15,6 +15,7 @@ def main():
     sys.exit(0)
 
 def gen_random (out_fn, random_generator):
+    
     f= open (out_fn, "wb")
     width = 512
     height = 512
