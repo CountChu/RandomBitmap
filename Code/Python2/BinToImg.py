@@ -13,7 +13,7 @@ def main ():
     print ("======== BinToImg ========")    
 
     if len (sys.argv) != 2:
-        print "Usage: python BinToImage.py File.bin"
+        print ("Usage: python BinToImage.py File.bin")
 
 
     bin_fn = sys.argv [1]
